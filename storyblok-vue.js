@@ -1,17 +1,15 @@
-(function () {
-
-  var addClass = function(el, className) {
-    if (el.classList) {
-      el.classList.add(className)
-    } else if (!new RegExp('\\b'+ className+'\\b').test(el.className)) {
-      el.className += ' ' + className
-    }
+var addClass = function(el, className) {
+  if (el.classList) {
+    el.classList.add(className)
+  } else if (!new RegExp('\\b'+ className+'\\b').test(el.className)) {
+    el.className += ' ' + className
   }
+}
 
-  function install(Vue) {
-
-    Vue.directive('editable', {
-      bind: function(el, binding) {
+export default {
+  install: (app) => {
+    app.directive('editable', {
+      mounted: function(el, binding) {
         if (typeof binding.value._editable === 'undefined' || binding.value._editable === null) {
           return
         }
@@ -26,16 +24,7 @@
     })
 
     if (typeof window !== 'undefined' && typeof window.storyblok !== 'undefined') {
-      Vue.prototype.$storyblok = window.storyblok
+      app.config.globalProperties.$storyblok = window.storyblok
     }
   }
-
-  if (typeof exports == "object") {
-    module.exports = install
-  } else if (typeof define == "function" && define.amd) {
-    define([], function(){ return install })
-  } else if (window.Vue) {
-    Vue.use(install)
-  }
-
-})()
+}
