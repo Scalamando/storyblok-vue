@@ -9,7 +9,7 @@ Requires Vue 3.0
 ## Install
 
 ```
-npm install storyblok-vue-3 --save-dev
+npm install storyblok-vue --save-dev
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ npm install storyblok-vue-3 --save-dev
 In your entry point:
 
 ```
-import StoryblokVue3 from 'storyblok-vue-3'
+import StoryblokVue3 from 'storyblok-vue'
 
 const app = createApp({...}).use(StoryblokVue3).mount('...');
 ```
