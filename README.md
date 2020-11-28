@@ -4,12 +4,12 @@ Make any element editable with the Vue Storyblok directive. Just add ```v-editab
 
 ## Compatibility
 
-Requires Vue 2.0
+Requires Vue 3.0
 
 ## Install
 
 ```
-npm install storyblok-vue --save-dev
+npm install storyblok-vue-3 --save-dev
 ```
 
 ## Usage
@@ -17,9 +17,9 @@ npm install storyblok-vue --save-dev
 In your entry point:
 
 ```
-import StoryblokVue from 'storyblok-vue'
+import StoryblokVue3 from 'storyblok-vue-3'
 
-Vue.use(StoryblokVue)
+const app = createApp({...}).use(StoryblokVue3).mount('...');
 ```
 
 In the template:
@@ -28,9 +28,6 @@ In the template:
   Test
 </div>
 ```
-
-See the jsfiddle to learn how to load the data from Storyblok:  
-https://jsfiddle.net/delooks/6tnttqvy/
 
 ## License
 
