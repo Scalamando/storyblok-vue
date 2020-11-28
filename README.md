@@ -17,9 +17,9 @@ npm install storyblok-vue --save-dev
 In your entry point:
 
 ```
-import StoryblokVue3 from 'storyblok-vue'
+import StoryblokVue from 'storyblok-vue'
 
-const app = createApp({...}).use(StoryblokVue3).mount('...');
+const app = createApp({...}).use(StoryblokVue).mount('...');
 ```
 
 In the template:
