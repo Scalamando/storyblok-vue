@@ -6,8 +6,7 @@ var addClass = function (el, className) {
   }
 };
 
-export default {
-  name: "StoryblokVue",
+const StoryblokVue = {
   install: (app) => {
     app.directive("editable", {
       mounted: function (el, binding) {
@@ -39,3 +38,5 @@ export default {
     }
   }
 };
+
+export default StoryblokVue;
