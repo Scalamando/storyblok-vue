@@ -1,10 +1,4 @@
-declare global {
-  interface Window {
-    storyblok: any;
-  }
-}
-
-var addClass = function (el: HTMLElement, className: string) {
+var addClass = function (el, className) {
   if (el.classList) {
     el.classList.add(className);
   } else if (!new RegExp("\\b" + className + "\\b").test(el.className)) {
@@ -15,7 +9,7 @@ var addClass = function (el: HTMLElement, className: string) {
 export default {
   install: (app) => {
     app.directive("editable", {
-      mounted: function (el: HTMLElement, binding: any) {
+      mounted: function (el, binding) {
         if (
           typeof binding.value._editable === "undefined" ||
           binding.value._editable === null
