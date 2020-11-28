@@ -1,1 +1,3 @@
-export interface StoryblokVue {}
+declare module StoryblokVue {
+  export default StoryblokVue;
+}
