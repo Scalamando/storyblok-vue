@@ -1,3 +1,9 @@
+declare global {
+  interface Window {
+    storyblok: any;
+  }
+}
+
 var addClass = function(el, className) {
   if (el.classList) {
     el.classList.add(className)
